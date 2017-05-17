@@ -15,3 +15,16 @@ the data for you:
 ```
 python scripts/fetch_raw_data.py
 ```
+
+Now we're going to load the data into MySQL; if you don't have MySQL already, you can get it from Homebrew and start the server running in the background:
+
+```
+brew install mysql 
+mysql.server start
+```
+
+Let's load the employment data into MySQL:
+
+```
+mysql < etl/create_public_employment_data_db.sql
+```
