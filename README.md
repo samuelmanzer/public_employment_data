@@ -26,5 +26,11 @@ mysql.server start
 Let's load the employment data into MySQL:
 
 ```
-mysql < etl/create_public_employment_data_db.sql
+mysql -u root < etl/create_public_employment_data_db.sql
+```
+
+When we're finished, we can delete all traces of this data:
+
+```
+mysql -u root < etl/clear_public_employment_data_db.sql
 ```
